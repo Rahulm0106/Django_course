@@ -1,0 +1,28 @@
+{% extends 'HelloWorld/base.html' %}
+
+{% block head %}
+    <style>
+        .bold{
+            font-weight: 900;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+{% include 'HelloWorld/navbar.html'%}
+<div class = "container">
+<h1>Hello World from RM !</h1>
+<ul class = "collection">
+    {% for mentor in mentors %}
+    <li class="collection-item" class = "{% cycle 'bold' '' %}">{{ mentor }}</li>
+    {% endfor %}
+</ul>
+
+{% if show_developer %}
+<span>
+    Developed by: {{ developer }}
+</span>
+{% endif %}
+</div>
+
+{% endblock %}
