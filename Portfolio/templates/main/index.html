@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+{% include 'main/navbar.html'%}
+
+<div class='container'>
+    <h1 class="center-align">Home Page</h1>
+
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="card red lighten-2">
+                <div class="card-content white-text">
+                    <img class="materialboxed responsive-img" src="https://rahulmandviya.technology/assets/img/rahul.png">
+                    <span class="card-title">Rahul Mandviya</span>
+                    <p></p>
+                </div>
+                <div class="card-actions">
+                    <a href="#">GitHub </a>
+                    <a href="#">LinkedIn </a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m8">
+            <div class="card red lighten-2">
+                <div class="card-content white-text">
+                    <span class="card-title">About Me</span>
+                    <p>A Data Science & ML Enthusiast 💻 | Strong Second-year Integrated MTech CSE with a specialization in AI | Student from Vellore Institute of Technology, Bhopal.
+
+                        Rahul Mandviya is a Hardworking & Determined person with hands-on experience in Python, C, C++, dart, flutter who is willing to work in the Data Science & Analytics Domain.👨🏻‍💻
+                        
+                        Interested in applying AI and ML concepts in different domains(especially agriculture and healthcare).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block script %} 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems, {});
+  });
+</script>
+
+{% endblock %}
