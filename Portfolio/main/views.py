@@ -9,3 +9,7 @@ def index(request):
 def projects(request):
     context={}
     return render(request, 'main/projects.html', context)
+
+def languages(request):
+    context={}
+    return render(request, 'main/languages.html', context)
