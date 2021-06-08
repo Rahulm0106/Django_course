@@ -17,18 +17,12 @@
         </div>
         <div class="col s12 m6">
             <ul class="collapsible">
+                {% for icon, name, about in projects %}
                 <li>
-                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Face Detection</div>
-                    <div class="collapsible-body"><span>Detect your Face</span></div>
+                    <div class="collapsible-header"><i class="material-icons">{{ icon }}</i>{{ name }}</div>
+                    <div class="collapsible-body"><span>{{ about }}</span></div>
                 </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">place</i>Stocks</div>
-                    <div class="collapsible-body"><span>You gotta invest.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">whatshot</i>Analyze</div>
-                    <div class="collapsible-body"><span>Analyse your data.</span></div>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
